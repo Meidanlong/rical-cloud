@@ -1,0 +1,1 @@
+# RICAL - spRIng Cloud ALibaba 小型企业落地解决方案
