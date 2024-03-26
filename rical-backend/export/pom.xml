@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.linkgems.rical</groupId>
+    <artifactId>backend.export</artifactId>
+    <packaging>jar</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <properties>
+        <adam-version>1.0.4-SNAPSHOT</adam-version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.linkgems.rical</groupId>
+            <artifactId>common.adam</artifactId>
+            <version>${adam-version}</version>
+        </dependency>
+    </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>LinkGems_hosted</id>
+            <name>LinkGems Nexus Release Repository</name>
+            <url>http://82.156.216.48:8081/repository/LinkGems_hosted/</url>
+        </repository>
+        <snapshotRepository>
+            <id>LinkGems_snapshot</id>
+            <name>LinkGems Nexus Snapshot Repository</name>
+            <url>http://82.156.216.48:8081/repository/LinkGems_snapshot/</url>
+        </snapshotRepository>
+    </distributionManagement>
+</project>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <groupId>org.LinkGems.rical</groupId>
+    <artifactId>common.adam</artifactId>
+    <description>基础依赖</description>
+    <packaging>jar</packaging>
+    <version>1.0.4-SNAPSHOT</version>
+    <modelVersion>4.0.0</modelVersion>
+
+    <properties>
+        <!--maven-->
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+
+        <!-- mysql -->
+        <mysql.version>8.0.16</mysql.version>
+        <tk-mybatis.version>2.1.5</tk-mybatis.version>
+
+        <!--other-->
+        <apache.commons.version>3.14.0</apache.commons.version>
+        <lombok.version>1.18.30</lombok.version>
+        <javax-validation.version>2.0.1.Final</javax-validation.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${apache.commons.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+        <!-- javax.validation -->
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>${javax-validation.version}</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
+
+    <distributionManagement>
+        <repository>
+            <id>LinkGems_hosted</id>
+            <name>LinkGems Nexus Release Repository</name>
+            <url>http://82.156.216.48:8081/repository/LinkGems_hosted/</url>
+        </repository>
+        <snapshotRepository>
+            <id>LinkGems_snapshot</id>
+            <name>LinkGems Nexus Snapshot Repository</name>
+            <url>http://82.156.216.48:8081/repository/LinkGems_snapshot/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <!--支持下载snapshot版本jar包-->
+            <id>LinkGems_group</id>
+            <url>http://82.156.216.48:8081/repository/LinkGems_group/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+</project>

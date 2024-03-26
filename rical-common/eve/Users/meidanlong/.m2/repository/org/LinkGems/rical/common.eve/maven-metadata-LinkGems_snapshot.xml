@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.LinkGems.rical</groupId>
+  <artifactId>common.eve</artifactId>
+  <versioning>
+    <versions>
+      <version>1.0.4-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20240301082444</lastUpdated>
+  </versioning>
+</metadata>
