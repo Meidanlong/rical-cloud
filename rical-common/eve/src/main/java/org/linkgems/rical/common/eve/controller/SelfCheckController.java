@@ -1,10 +1,10 @@
 package org.linkgems.rical.common.eve.controller;
 
-import org.linkgems.rical.common.eve.domain.SelfCheckRequest;
+import cn.hutool.json.JSONUtil;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.ArrayUtils;
-import org.linkgems.rical.common.eve.utils.JacksonUtil;
+import org.linkgems.rical.common.eve.domain.request.SelfCheckRequest;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
@@ -68,7 +68,7 @@ public class SelfCheckController implements BeanFactoryAware {
             Method method = beanClazz.getMethod(request.getMethodName(), parameterTyps);
             Object returnValue = method.invoke(targetBean, request.getParameters());
 
-            return JacksonUtil.writeValueAsString(returnValue);
+            return JSONUtil.toJsonStr(returnValue);
 
         } catch (Exception e) {
             log.error("errMsg : {}", e.getMessage(), e);

@@ -1,10 +1,9 @@
-package org.linkgems.rical.common.eve.domain;
+package org.linkgems.rical.common.eve.domain.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.linkgems.rical.common.adam.domain.BaseObject;
-import sun.security.x509.IPAddressName;
 
 import javax.validation.constraints.NotNull;
 
@@ -23,11 +22,8 @@ public class SelfCheckRequest extends BaseObject {
     @NotNull
     private String appName;
 
-
     /**
-     * 目标服务的ip,下面是后续想要优化的类型
-     *
-     * @see IPAddressName
+     * 目标服务的ip
      */
     private String ip;
 

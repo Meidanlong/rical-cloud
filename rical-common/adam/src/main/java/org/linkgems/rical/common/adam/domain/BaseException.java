@@ -1,7 +1,7 @@
 package org.linkgems.rical.common.adam.domain;
 
-import org.linkgems.rical.common.adam.enums.ErrorEnum;
 import lombok.Getter;
+import org.linkgems.rical.common.adam.enums.ErrorEnum;
 
 /**
  * @description:
@@ -53,6 +53,17 @@ public class BaseException extends RuntimeException {
     public BaseException(ErrorEnum error, Throwable cause) {
         super(cause);
         this.code = error.getCode();
+    }
+
+
+    /**
+     * 根据Throwable构造业务类异常
+     *
+     * @param cause
+     */
+    public BaseException(String message, Throwable cause) {
+        super(message, cause);
+        this.code = ErrorEnum.XXX.getCode();
     }
 
     /**
