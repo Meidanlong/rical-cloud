@@ -7,7 +7,7 @@ services:
     ports:
       - "8081:8081"
     volumes:
-      - ${VOLUME_ROOT}/nexus:/nexus-data/
+      - ./config/nexus:/nexus-data/
     restart: always
     privileged: true
 
@@ -25,9 +25,9 @@ services:
       - "3306:3306"
     volumes:
       # 数据挂载
-      - ${VOLUME_ROOT}/mysql/data/:/var/lib/mysql/
+      - ./config/mysql/data/:/var/lib/mysql/
       # 配置挂载
-      - ${VOLUME_ROOT}/mysql/conf/:/etc/mysql/conf.d/
+      - ./config/mysql/conf/:/etc/mysql/conf.d/
     command:
       # 将mysql8.0默认密码策略 修改为 原先 策略 (mysql8.0对其默认策略做了更改 会导致密码无法匹配)
       --default-authentication-plugin=mysql_native_password
