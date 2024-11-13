@@ -9,6 +9,7 @@
         <version>1.0.0</version>
     </parent>
 
+    <description>示例项目</description>
     <artifactId>common.eden</artifactId>
 
     <properties>

@@ -12,6 +12,7 @@
         <module>adam</module>
         <module>eve</module>
         <module>eden</module>
+        <module>inf-bom</module>
     </modules>
 
 </project>
